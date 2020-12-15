@@ -1,8 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-
-import { Container } from './styles';
+import {
+  Container,
+  TopSide,
+  BotSite,
+  RepoIcon,
+  StarIcon,
+  ForkIcon,
+} from './styles';
 
 interface Props {
   username: string;
@@ -19,25 +25,38 @@ const RepoCard: React.FC<Props> = (
   description,
   language,
   stars,
+  forks,
 ) => {
-  return (
-    (
-<Container>
-      <TopSide>
+  const languageClass = language ? language.toLowerCase() : 'other';
 
+  return (
+    <Container>
+      <TopSide>
         <header>
-        <RepoIcon />
-        <Link to={`/${username}/${reponame}`}>{reponame}</Link>
+          <RepoIcon />
+          <Link to={`/${username}/${reponame}`}>{reponame}</Link>
         </header>
 
         <p>{description}</p>
       </TopSide>
       <BotSite>
-
+        <ul>
+          <li>
+            <div className={`language ${languageClass}`} />
+            <span>{language}</span>
+          </li>
+          <li>
+            <StarIcon />
+            <span>{stars}</span>
+          </li>
+          <li>
+            <ForkIcon />
+            <span>{forks}</span>
+          </li>
+        </ul>
       </BotSite>
-
-  </Container>
-);
+    </Container>
+  );
 };
 
 export default RepoCard;
