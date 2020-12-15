@@ -1,8 +1,17 @@
 import React from 'react';
 
-import { Container, Main, LeftSide, RightSide } from './styles';
+import {
+  Container,
+  Main,
+  LeftSide,
+  RightSide,
+  Repos,
+  CalendarHeading,
+} from './styles';
 
 import ProfileData from '../../components/ProfileData';
+import RepoCard from '../../components/RepoCard';
+import RandomCalendar from '../../components/RandomCalendar';
 
 const Profile: React.FC = () => {
   return (
@@ -25,7 +34,25 @@ const Profile: React.FC = () => {
         <RightSide>
           <Repos>
             <h2>Ramdom repos</h2>
+
+            <div>
+              {[1, 2, 3, 4, 5, 6].map(n => (
+                <RepoCard
+                  key={n}
+                  username="julianotavares"
+                  reponame="github-clone"
+                  description="Contain all of github clone with ReactJS using Typscript"
+                  stars={}
+                />
+              ))}
+            </div>
           </Repos>
+
+          <CalendarHeading>
+            Random calendar (do not represent actual data)
+          </CalendarHeading>
+
+          <RandomCalendar />
         </RightSide>
       </Main>
     </Container>
