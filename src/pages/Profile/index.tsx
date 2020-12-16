@@ -42,7 +42,7 @@ const Profile: React.FC = () => {
                   username="julianotavares"
                   reponame="github-clone"
                   description="Contain all of github clone with ReactJS using Typscript"
-                  stars={}
+                  stars="3"
                 />
               ))}
             </div>
