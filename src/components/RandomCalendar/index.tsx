@@ -22,7 +22,14 @@ const RandomCalendar: React.FC = () => {
           values={values}
           gutterSize={3.5}
           classForValue={(item: HeatmapValue) => {
-            return `scale-${item.count}`;
+            let clampedCount = 0;
+
+            if (item !== null) {
+              clampedCount = Math.max(item.count, 0);
+              clampedCount = Math.min(item.count, 4);
+            }
+
+            return `scale-${clampedCount}`;
           }}
         />
       </div>
