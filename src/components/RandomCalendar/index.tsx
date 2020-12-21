@@ -31,6 +31,7 @@ const RandomCalendar: React.FC = () => {
 
             return `scale-${clampedCount}`;
           }}
+          showWeekdayLabels
         />
       </div>
 
