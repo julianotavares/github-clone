@@ -19,14 +19,14 @@ interface Props {
   forks: number;
 }
 
-const RepoCard: React.FC<Props> = (
+const RepoCard: React.FC<Props> = ({
   username,
   reponame,
   description,
   language,
   stars,
   forks,
-) => {
+}) => {
   const languageClass = language ? language.toLowerCase() : 'other';
 
   return (
