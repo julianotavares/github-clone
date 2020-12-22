@@ -1,10 +1,7 @@
 import styled, { css } from 'styled-components';
-
 import { RiBookMarkLine, RiStarLine } from 'react-icons/ri';
 import { AiOutlineFork } from 'react-icons/ai';
 import { FaGithub } from 'react-icons/fa';
-
-export const Container = styled.div``;
 
 export const Container = styled.div`
   display: flex;
