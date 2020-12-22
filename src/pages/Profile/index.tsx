@@ -8,6 +8,7 @@ import {
   Repos,
   CalendarHeading,
   RepoIcon,
+  Tab,
 } from './styles';
 
 import ProfileData from '../../components/ProfileData';
@@ -25,6 +26,14 @@ const Profile: React.FC = () => {
 
   return (
     <Container>
+      <Tab className="desktop">
+        <div className="wrapper">
+          <span className="offset" />
+          <TabContent />
+        </div>
+
+        <span className="line" />
+      </Tab>
       <Main>
         <LeftSide>
           <ProfileData
