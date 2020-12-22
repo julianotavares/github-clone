@@ -12,13 +12,12 @@ export const Container = styled.div``;
 export const Flex = styled.div`
   display: flex;
   align-items: center;
-
   > div {
     margin-left: 24px;
     > h1 {
       font-size: 26px;
       line-height: 1.25;
-      color: var(--grey-dark);
+      color: var(--gray-dark);
       font-weight: 600;
     }
     > h2 {
@@ -27,11 +26,9 @@ export const Flex = styled.div`
       font-weight: 300;
     }
   }
-
   @media (min-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
-
     > div {
       margin-left: 0;
       margin-top: 16px;
@@ -42,9 +39,6 @@ export const Flex = styled.div`
 export const Avatar = styled.img`
   width: 16%;
   border-radius: 50%;
-  flex-wrap: wrap;
-  margin: 20px 0;
-
   @media (min-width: 768px) {
     width: 100%;
     margin-top: -34px;
@@ -54,11 +48,11 @@ export const Avatar = styled.img`
 export const Row = styled.ul`
   display: flex;
   align-items: center;
-
+  flex-wrap: wrap;
+  margin: 20px 0;
   > li {
     display: flex;
     align-items: center;
-
     > span {
       font-size: 14px;
       color: var(--gray);
@@ -76,6 +70,10 @@ const iconCSS = css`
   flex-shrink: 0;
 `;
 
+export const PeopleIcon = styled(RiGroupLine)`
+  ${iconCSS}
+`;
+
 export const Column = styled.ul`
   li {
     display: flex;
@@ -91,10 +89,6 @@ export const Column = styled.ul`
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-`;
-
-export const PeapleIcon = styled(RiGroupLine)`
-  ${iconCSS}
 `;
 
 export const CompanyIcon = styled(RiBuilding4Line)`

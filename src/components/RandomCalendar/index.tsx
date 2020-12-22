@@ -41,7 +41,6 @@ const generateHeatmapValues = (startDate: Date, endDate: Date) => {
   const values: HeatmapValue[] = [];
 
   let currentDate = startDate;
-
   while (isBefore(currentDate, endDate) || isSameDay(currentDate, endDate)) {
     const count = Math.random() * 4;
 
