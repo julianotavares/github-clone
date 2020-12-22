@@ -109,5 +109,16 @@ export const Tab = styled.div`
     .content {
       margin: 0 auto;
     }
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+    &.desktop {
+      display: none;
+
+      @media (min-width: 768px) {
+        display: unset;
+      }
+    }
   }
 `;
