@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 import {
   Container,
-  TopSide,
-  BotSite,
+  Topside,
   RepoIcon,
+  Botside,
   StarIcon,
   ForkIcon,
 } from './styles';
@@ -15,7 +15,7 @@ interface Props {
   reponame: string;
   description?: string;
   language?: string;
-  stars: string;
+  stars: number;
   forks: number;
 }
 
@@ -31,15 +31,16 @@ const RepoCard: React.FC<Props> = ({
 
   return (
     <Container>
-      <TopSide>
+      <Topside>
         <header>
           <RepoIcon />
           <Link to={`/${username}/${reponame}`}>{reponame}</Link>
         </header>
 
         <p>{description}</p>
-      </TopSide>
-      <BotSite>
+      </Topside>
+
+      <Botside>
         <ul>
           <li>
             <div className={`language ${languageClass}`} />
@@ -54,7 +55,7 @@ const RepoCard: React.FC<Props> = ({
             <span>{forks}</span>
           </li>
         </ul>
-      </BotSite>
+      </Botside>
     </Container>
   );
 };
