@@ -5,8 +5,8 @@ import {
   Flex,
   Avatar,
   Row,
+  PeopleIcon,
   Column,
-  PeapleIcon,
   CompanyIcon,
   LocationIcon,
   EmailIcon,
@@ -25,7 +25,7 @@ interface Props {
   blog?: string;
 }
 
-const ProfileData: React.FC<Props> = (
+const ProfileData: React.FC<Props> = ({
   username,
   name,
   avatarUrl,
@@ -35,7 +35,7 @@ const ProfileData: React.FC<Props> = (
   location,
   email,
   blog,
-) => {
+}) => {
   return (
     <Container>
       <Flex>
@@ -49,14 +49,14 @@ const ProfileData: React.FC<Props> = (
 
       <Row>
         <li>
-          <PeapleIcon />
+          <PeopleIcon />
           <b>{followers}</b>
-          <span>{followers}</span>
+          <span>followers</span>
           <span>·</span>
         </li>
         <li>
           <b>{following}</b>
-          <span>{following}</span>
+          <span>following</span>
         </li>
       </Row>
 
