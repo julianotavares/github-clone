@@ -8,6 +8,7 @@ import {
   Repos,
   CalendarHeading,
   RepoIcon,
+  Tab,
 } from './styles';
 
 import ProfileData from '../../components/ProfileData';
